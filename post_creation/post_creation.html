@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>投稿作成</title>
+    <link rel="stylesheet" href="/post_creation/post_creation.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 id="locationName">現在地を取得中...</h1>
+        </div>
+    </header>
+    <main>
+        <div id="photoPreviewContainer">
+            <div class="ring-and-color">
+                <div id="ringPreview">
+                    <button id="takePhotoButton">写真を撮影する</button>
+                    <img id="photoPreview" alt="撮影した写真のプレビュー" style="display:none;">
+                </div>
+                <div class="color-selection">
+                    <label for="ringColorInput">RINGの色を選択:</label>
+                    <input type="color" id="ringColorInput">
+                </div>
+            </div>
+        </div>
+        <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none;">
+        <textarea id="captionInput" placeholder="何をしていますか？"></textarea>
+        <button id="shareButton">Let’s Share</button>
+    </main>
+    <footer>
+        <a href="/home/home.html"><img src="/assets/images/footer/home.svg" alt="Home"></a>
+        <a href="/post_viewing/post_viewing.html"><img src="/assets/images/footer/post_viewing.svg" alt="View"></a>
+        <a href="/post_creation/search_place.html" class="active"><img src="/assets/images/footer/post_creation.svg" alt="Create"></a>
+        <a href="/ring_navi/ring_navi.html"><img src="/assets/images/footer/ring_navi.svg" alt="AI"></a>
+        <a href="/achievements/achievements.html"><img src="/assets/images/footer/achievements.svg" alt="Achievements"></a>
+    </footer>
+    <script src="/assets/js/auth.js"></script>
+    <script src="/post_creation/post_creation.js"></script>
+</body>
+</html>
